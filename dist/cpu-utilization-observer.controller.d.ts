@@ -5,6 +5,6 @@ import { CpuUtilizationService } from "./cpu-utilization.service";
 export declare class CpuUtilizationController {
     private cpuUtilizationService;
     constructor(cpuUtilizationService: CpuUtilizationService);
-    fetchCPUUtilizationLoad(): number;
+    fetchCPUUtilizationLoad(): Promise<number>;
 }
 //# sourceMappingURL=cpu-utilization-observer.controller.d.ts.map

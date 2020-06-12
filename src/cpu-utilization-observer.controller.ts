@@ -10,7 +10,7 @@ export class CpuUtilizationController {
   constructor(private cpuUtilizationService: CpuUtilizationService) {}
   
   @Get()
-  fetchCPUUtilizationLoad() {
+  async fetchCPUUtilizationLoad() {
     return this.cpuUtilizationService.getCpuLoad();
   }
 }

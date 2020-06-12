@@ -1,1 +1,1 @@
-{"version":3,"file":"cpu-utilization.service.d.ts","sourceRoot":"","sources":["../src/cpu-utilization.service.ts"],"names":[],"mappings":"AAEA;;GAEG;AACH,qBACa,qBAAqB;IAGhC,OAAO,CAAC,OAAO,CAAc;IAG7B,UAAU,IAAI,MAAM;IAKpB,UAAU,CAAC,UAAU,EAAE,MAAM,GAAG,IAAI;CAGrC"}
+{"version":3,"file":"cpu-utilization.service.d.ts","sourceRoot":"","sources":["../src/cpu-utilization.service.ts"],"names":[],"mappings":"AAGA;;GAEG;AACH,qBACa,qBAAqB;IAGhC,OAAO,CAAC,OAAO,CAAc;IAGvB,UAAU,IAAI,OAAO,CAAC,MAAM,CAAC;IAMnC,UAAU,CAAC,UAAU,EAAE,MAAM,GAAG,IAAI;YAKtB,cAAc;IA4B5B,OAAO,CAAC,UAAU;CA0BnB"}
