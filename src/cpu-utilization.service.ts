@@ -7,6 +7,8 @@ import  * as os from 'os';
 @Injectable()
 export class CpuUtilizationService {
 
+  simulatedCpuLoad = 60;
+
   //returns the current cpu load of the database service
   async getCpuLoad(): Promise<number> {
     return this.recordCpuUsage();

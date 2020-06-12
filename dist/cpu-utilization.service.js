@@ -33,17 +33,12 @@ const os = __importStar(require("os"));
  */
 let CpuUtilizationService = class CpuUtilizationService {
     constructor() {
-        //default value for cpu load is 70
-        this.cpuLoad = 70;
+        this.simulatedCpuLoad = 60;
     }
     //returns the current cpu load of the database service
     async getCpuLoad() {
         return this.recordCpuUsage();
         // return this.cpuLoad;
-    }
-    //Sets the cpuLoad to given Number.
-    setCpuLoad(newCpuLoad) {
-        this.cpuLoad = newCpuLoad;
     }
     // Credit: https://gist.github.com/bag-man/5570809
     async recordCpuUsage() {

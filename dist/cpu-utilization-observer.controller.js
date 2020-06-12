@@ -22,6 +22,9 @@ let CpuUtilizationController = class CpuUtilizationController {
     async fetchCPUUtilizationLoad() {
         return this.cpuUtilizationService.getCpuLoad();
     }
+    async fetchSimulatedCpuUtilizationLoad() {
+        return this.cpuUtilizationService.simulatedCpuLoad;
+    }
 };
 __decorate([
     common_1.Get(),
@@ -29,6 +32,12 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], CpuUtilizationController.prototype, "fetchCPUUtilizationLoad", null);
+__decorate([
+    common_1.Get(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], CpuUtilizationController.prototype, "fetchSimulatedCpuUtilizationLoad", null);
 CpuUtilizationController = __decorate([
     common_1.Controller('cpu'),
     __metadata("design:paramtypes", [cpu_utilization_service_1.CpuUtilizationService])
