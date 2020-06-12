@@ -7,18 +7,10 @@ import  * as os from 'os';
 @Injectable()
 export class CpuUtilizationService {
 
-  //default value for cpu load is 70
-  private cpuLoad: number = 70;
-
   //returns the current cpu load of the database service
   async getCpuLoad(): Promise<number> {
     return this.recordCpuUsage();
     // return this.cpuLoad;
-  }
-
-  //Sets the cpuLoad to given Number.
-  setCpuLoad(newCpuLoad: number): void {
-    this.cpuLoad = newCpuLoad;
   }
 
   // Credit: https://gist.github.com/bag-man/5570809
