@@ -6,6 +6,6 @@ export declare class CpuUtilizationController {
     private cpuUtilizationService;
     constructor(cpuUtilizationService: CpuUtilizationService);
     fetchCPUUtilizationLoad(): Promise<number>;
-    fetchSimulatedCpuUtilizationLoad(): Promise<number>;
+    fetchSimulatedCpuUtilizationLoad(): number;
 }
 //# sourceMappingURL=cpu-utilization-observer.controller.d.ts.map

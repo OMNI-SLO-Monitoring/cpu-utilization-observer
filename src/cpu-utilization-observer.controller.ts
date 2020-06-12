@@ -15,7 +15,7 @@ export class CpuUtilizationController {
   }
 
   @Get('simulated')
-  async fetchSimulatedCpuUtilizationLoad() {
-      return this.cpuUtilizationService.simulatedCpuLoad;
+  fetchSimulatedCpuUtilizationLoad() {
+    return this.cpuUtilizationService.simulatedCpuLoad;
   }
 }
