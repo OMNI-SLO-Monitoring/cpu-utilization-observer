@@ -1,0 +1,46 @@
+openapi: '3.0.2'
+info:
+  title: CPU utilization observer
+  version: '1.0.0'
+  description: CPU utilization observer Docs
+tags: 
+  - name: Cpu
+    description: Checking Cpu values
+paths:
+  /cpu:
+    get:
+      description: Gets current real CPU utilization value
+      tags: 
+        - Cpu
+      operationId: fetchCPUUtilizationLoad
+      responses:
+        '200':
+          description: OK
+          content:
+            'text/html': 
+              schema:
+                $ref: '#/components/schemas/Cpuvalue'
+        '404':
+           description: 'Error: Not found'        
+  /cpu/simulated:
+    get:
+      description: Gets simulated CPU utilization value
+      tags: 
+        - Cpu
+      operationId: fetchSimulatedCpuUtilizationLoad
+      responses:
+        '200':
+           description: OK
+           content:
+            'text/html': 
+              schema:
+                $ref: '#/components/schemas/Cpuvalue'
+        '404':
+           description: 'Error: Not found'
+  
+components:
+  schemas:
+    Cpuvalue:
+      type: integer
+      example: 
+        60
