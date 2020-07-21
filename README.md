@@ -15,5 +15,6 @@ Import it into a module like so:
 ## Usage
 
 GET request to `/cpu` to query the actual cpu usage.
+
 GET request to `/cpu/simulated` to query the simulated cpu usage.
 
