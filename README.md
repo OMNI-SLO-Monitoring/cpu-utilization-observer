@@ -1,6 +1,6 @@
 # cpu-utilization-observer
 
-A Package that exports a NestJS Module, that measures the current CPU Usage and provides an endpoint under `/cpu` to query cpu usage.
+A Package that exports a NestJS Module, that measures the current cpu usage and also provides a simulated cpu usage value.
 
 ## Installation
 
@@ -14,4 +14,6 @@ Import it into a module like so:
 
 ## Usage
 
-Make Get Request to `/cpu` to query cpu usage
+GET request to `/cpu` to query the actual cpu usage.
+GET request to `/cpu/simulated` to query the simulated cpu usage.
+
