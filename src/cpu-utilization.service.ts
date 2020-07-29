@@ -9,13 +9,20 @@ export class CpuUtilizationService {
 
   simulatedCpuLoad = 60;
 
-  //returns the current cpu load of the database service
+  /**
+   * returns the current cpu load of the database service
+   */
   async getCpuLoad(): Promise<number> {
     return this.recordCpuUsage();
     // return this.cpuLoad;
   }
 
-  // Credit: https://gist.github.com/bag-man/5570809
+  /**
+   * Credit: https://gist.github.com/bag-man/5570809
+   * 
+   * output the average CPU percentage over a certain time period on the console
+   * @returns promise which contains a number representing the cpu usage when resolved
+   */
   private async recordCpuUsage(): Promise<number> {
     //Grab first CPU Measure
     const startMeasure = this.cpuAverage();
@@ -43,7 +50,10 @@ export class CpuUtilizationService {
     })
   }
 
-  // Create function to get CPU information
+  /**
+   * Create function to get CPU information
+   * @returns Return the the idle and the total time
+   */
   private cpuAverage() {
     const cpus = os.cpus();
   
@@ -66,7 +76,7 @@ export class CpuUtilizationService {
       totalIdle += cpu.times.idle;
     }
   
-    //Return the average Idle and Tick times
+    
     return { idle: totalIdle / cpus.length, total: totalTick / cpus.length};
   }
 
