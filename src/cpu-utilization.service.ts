@@ -10,17 +10,17 @@ export class CpuUtilizationService {
   simulatedCpuLoad = 60;
 
   /**
-   * returns the current cpu load of the database service
+   * @returns the current CPU load of the physical machine the service runs on
    */
   async getCpuLoad(): Promise<number> {
     return this.recordCpuUsage();
-    // return this.cpuLoad;
   }
 
   /**
    * Credit: https://gist.github.com/bag-man/5570809
    * 
    * output the average CPU percentage over a certain time period on the console
+   * 
    * @returns promise which contains a number representing the cpu usage when resolved
    */
   private async recordCpuUsage(): Promise<number> {
@@ -52,6 +52,7 @@ export class CpuUtilizationService {
 
   /**
    * Create function to get CPU information
+   * 
    * @returns Return the the idle and the total time
    */
   private cpuAverage() {

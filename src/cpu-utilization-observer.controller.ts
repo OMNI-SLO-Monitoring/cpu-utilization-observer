@@ -2,7 +2,7 @@ import { Controller, Get } from "@nestjs/common";
 import { CpuUtilizationService } from "./cpu-utilization.service";
 
 /**
- * CPU Controller to show intern Value on port: /cpu. 
+ * CPU Controller to show intern value on endpoint: /cpu. 
  */
 @Controller('cpu')
 export class CpuUtilizationController {
@@ -10,7 +10,7 @@ export class CpuUtilizationController {
   constructor(private cpuUtilizationService: CpuUtilizationService) {}
 
   /**
-   * handles get-request for the real current cpu value
+   * handles get-request for the actual current CPU value
    */
   @Get()
   async fetchCPUUtilizationLoad() {
@@ -18,7 +18,7 @@ export class CpuUtilizationController {
   }
 
   /**
-   * handles request to /simulated and shows the simulated cpu value with a hard coded cpu utilization
+   * handles request to /simulated and shows a simulated CPU value with a hard coded CPU utilization
    */
   @Get('simulated')
   fetchSimulatedCpuUtilizationLoad() {
